@@ -3514,7 +3514,7 @@ table tfoot .cart_total_voucher .price-discount {
   opacity: 1 !important;
   -ms-filter: none;
   filter: none;
-  padding: 40px 30% 10px 6%;
+  padding: 20px 15% 10px 6%;
   position: absolute;
   text-align: left;
   -webkit-transition: 0.3s;
@@ -3522,7 +3522,7 @@ table tfoot .cart_total_voucher .price-discount {
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s;
-  width: 38%;
+  width: 64%;
   z-index: 10;
 }
 .menuManias > ul > li > ul li {
@@ -5206,6 +5206,12 @@ table tfoot .cart_total_voucher .price-discount {
 }
 #sslsSiteSeal {
   width: 200px;
+}
+#sslsSiteSeal .sslslock {
+  padding: 0 !important;
+}
+#sslsSiteSeal .sslslock img {
+  height: 40px !important;
 }
 .accesorios {
   margin-top: 20px;

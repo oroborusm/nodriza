@@ -563,11 +563,13 @@
 								<h3 class="page-product-heading">{l s='More info'}</h3>
 							</a>
 						</li>
-						<li>
-							<a href="#section-bar-2" class="icon icon-home">
-								{if isset($features) && $features}<h3 class="page-product-heading">{l s='Data sheet'}</h3>{/if}
-							</a>
-						</li>
+						{if isset($features) && $features}
+							<li>
+								<a href="#section-bar-2" class="icon icon-home">
+									{if isset($features) && $features}<h3 class="page-product-heading">{l s='Data sheet'}</h3>{/if}
+								</a>
+							</li>
+						{/if}
 						<li>
 							<a href="#section-bar-3" class="icon icon-display">
 								{$HOOK_PRODUCT_TAB}
@@ -579,18 +581,20 @@
 					<section id="section-bar-1">
 						<p>{$product->description}</p>
 					</section>
-					<section id="section-bar-2">
-							<table class="table-data-sheet">
-								{foreach from=$features item=feature}
-								<tr class="{cycle values="odd,even"}">
-									{if isset($feature.value)}
-									<td><span>{$feature.name|escape:'html':'UTF-8'}</span></td>
-									<td><span>{$feature.value|escape:'html':'UTF-8'}</span></td>
-									{/if}
-								</tr>
-								{/foreach}
-							</table>
-					</section>
+					{if isset($features) && $features}
+						<section id="section-bar-2">
+								<table class="table-data-sheet">
+									{foreach from=$features item=feature}
+									<tr class="{cycle values="odd,even"}">
+										{if isset($feature.value)}
+										<td><span>{$feature.name|escape:'html':'UTF-8'}</span></td>
+										<td><span>{$feature.value|escape:'html':'UTF-8'}</span></td>
+										{/if}
+									</tr>
+									{/foreach}
+								</table>
+						</section>
+					{/if}
 					<section id="section-bar-3">
 						{if isset($HOOK_PRODUCT_TAB_CONTENT) && $HOOK_PRODUCT_TAB_CONTENT}{$HOOK_PRODUCT_TAB_CONTENT}{/if}
 					</section>
