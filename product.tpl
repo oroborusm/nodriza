@@ -238,7 +238,7 @@
 
 
 			<div class="carroDecripcion">
-				<img class="pay" src="http://www.asistecar.cl/public_img/secure-transbanc.gif" alt="">
+				<img class="pay" src="https://www.asistecar.cl/public_img/secure-transbanc.gif" alt="">
 				<div class="rodeacarroDecripcion">
 
 					{if ($product->show_price && !isset($restricted_country_mode)) || isset($groups) || $product->reference || (isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS)}
@@ -256,6 +256,7 @@
 								{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 									<!-- prices -->
 									<div class="price">
+										<p class="ivaInclude">iva incluido</p>
 										<p class="precioActual" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 											{if $product->quantity > 0}<link itemprop="availability" href="http://schema.org/InStock"/>{/if}
 											{if $priceDisplay >= 0 && $priceDisplay <= 2}

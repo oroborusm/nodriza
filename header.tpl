@@ -152,7 +152,7 @@
 					
 											
 											<a class="linkCreaCuenta" href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Log in to your customer account' mod='blockuserinfo'}">
-												Crea una cuenta
+												{l s='Login' mod='blockuserinfo'}
 											</a>
 										</div>
 									</form>

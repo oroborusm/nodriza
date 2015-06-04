@@ -2429,18 +2429,46 @@ body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .b
 body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .box-info-product .content_prices .price {
   font-size: 16px;
 }
+body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .box-info-product .content_prices .price .ivaInclude {
+  background: #434142;
+  color: #fff;
+  display: block;
+  font-family: 'open sans';
+  font-size: 9px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+  position: absolute;
+  right: 25px;
+  text-align: center;
+  text-transform: capitalize;
+  top: -2px;
+  width: 34px;
+  z-index: 1;
+}
+body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .box-info-product .content_prices .price .ivaInclude:after {
+  border-bottom: 5px solid transparent;
+  border-left: 17px solid #434142;
+  border-top: 5px solid #434142;
+  border-right: 17px solid #434142;
+  bottom: -10px;
+  content: '';
+  left: 0;
+  position: absolute;
+}
 body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .box-info-product .content_prices .price .precioActual {
   background: #ff6b00;
   display: block;
   line-height: 50px;
   margin: 18px auto 0;
+  position: relative;
   text-align: center;
   width: 80%;
 }
 body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .box-info-product .content_prices .price .precioActual span {
   color: #fff;
   font-family: 'oswaldregular';
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 100;
 }
 body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .box-info-product .cantidad {
