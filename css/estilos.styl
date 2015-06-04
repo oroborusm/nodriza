@@ -2801,6 +2801,7 @@ table
 				small
 					display block
 					font-style italic
+					max-width 350px
 					a
 						color oscuro
 						text-decoration none
@@ -3953,13 +3954,13 @@ table
 	width 100%
 	.row
 	.payment_module
-		display inline-block
-		margin 0
-		width 48%
-	.payment_module
 		background #fbfbfb
 		border 1px solid clarito
-		margin 0 1% 5px 1%
+		display block
+		margin 2px auto
+		width 70%
+	.payment_module
+		margin 0 auto
 		a
 			color oscuro
 			display block
@@ -4019,7 +4020,7 @@ table
 			background clarito
 	.row
 		.payment_module	
-			border 1px solid clarito
+			border 1px solid transparent
 			width 100%
 
 .colorao
@@ -5433,10 +5434,12 @@ hr
 			font-size 15px
 			text-align left
 		.delivery_options
+			text-align center
 			.delivery_option
 				display inline-block
+				margin 2px auto
 				vertical-align top
-				width 49%
+				width 70%
 				.eligeTransporte
 					font-size 13px
 					width 100%
@@ -5457,12 +5460,17 @@ hr
 										font-family 'oswaldregular'
 										font-weight 100
 										display block
+							.delivery_option_logo
+								width 100px
+								img
+									max-width 55px
 							.delivery_option_price
 								.delivery_option_price
 									color verdeAsiste
 									font-weight 600
 									line-height 45px
-									text-align left
+									padding 0 20px
+									text-align center
 							.delivery_option_radio
 								.radio
 									span
@@ -5472,7 +5480,7 @@ hr
 										width 13px
 										input
 											cursor pointer
-											line-height 55px
+											height 13px
 											
 								
 .content_only

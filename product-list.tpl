@@ -154,7 +154,7 @@
 									<span itemprop="price" class="precio">
 										{if !$priceDisplay}{convertPrice price=$product.price}{else}{convertPrice price=$product.price_tax_exc}{/if}
 									</span>
-									<span class="ivaInclude">iva icluido</span>
+									<span class="ivaInclude">iva incluido</span>
 									<meta itemprop="priceCurrency" content="{$currency->iso_code}" />
 									{if isset($product.specific_prices) && $product.specific_prices && isset($product.specific_prices.reduction) && $product.specific_prices.reduction > 0}
 										{hook h="displayProductPriceBlock" product=$product type="old_price"}
