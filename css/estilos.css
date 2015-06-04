@@ -3844,22 +3844,24 @@ table tfoot .cart_total_voucher .price-discount {
   background: #ecedef;
   position: relative;
   margin: 2em auto 0;
-  padding-bottom: 7px;
-  text-align: center;
+  padding: 7px 20px;
+  text-align: left;
 }
 .content_sortPagiBar .sortPagiBar .productsSortForm span {
   display: none;
 }
-.content_sortPagiBar .sortPagiBar .productsSortForm .select {
-  margin: 0 auto;
-  width: 50%;
-}
 .content_sortPagiBar .sortPagiBar .productsSortForm .select label {
   color: #434142;
-  font-weight: 600;
+  font-family: 'oswaldregular';
+  font-weight: 400;
+}
+.content_sortPagiBar .sortPagiBar .productsSortForm .select label,
+.content_sortPagiBar .sortPagiBar .productsSortForm .select .selector {
+  display: inline-block;
+  vertical-align: middle;
 }
 .content_sortPagiBar .sortPagiBar .productsSortForm .select .selector {
-  width: 100% !important;
+  margin-left: 20px;
 }
 .content_sortPagiBar .top-pagination-content {
   display: none;
