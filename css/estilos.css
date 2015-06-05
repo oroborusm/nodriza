@@ -2430,27 +2430,26 @@ body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .b
   font-size: 16px;
 }
 body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .box-info-product .content_prices .price .ivaInclude {
-  background: #434142;
+  background: #00a2b2;
   color: #fff;
   display: block;
-  font-family: 'open sans';
-  font-size: 9px;
-  font-style: italic;
-  font-weight: 400;
+  font-family: 'oswaldlight';
+  font-size: 11.5px;
+  font-weight: 100;
   margin: 0;
   position: absolute;
-  right: 25px;
+  right: 27px;
   text-align: center;
   text-transform: capitalize;
   top: -2px;
-  width: 34px;
+  width: 36px;
   z-index: 1;
 }
 body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .box-info-product .content_prices .price .ivaInclude:after {
   border-bottom: 5px solid transparent;
-  border-left: 17px solid #434142;
-  border-top: 5px solid #434142;
-  border-right: 17px solid #434142;
+  border-left: 18px solid #00a2b2;
+  border-top: 5px solid #00a2b2;
+  border-right: 18px solid #00a2b2;
   bottom: -10px;
   content: '';
   left: 0;
@@ -2470,6 +2469,7 @@ body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .b
   font-family: 'oswaldregular';
   font-size: 20px;
   font-weight: 100;
+  padding-right: 20px;
 }
 body .productoPag .productoFoto .contenedorProductoFoto .carroDecripcion form .box-info-product .cantidad {
   font-size: 15px;
@@ -2724,9 +2724,11 @@ body .productoPag .productoFoto .contenedorProductoFoto .descripcion .linksDescr
 body .productoPag .productoFoto .contenedorProductoFoto .descripcion .linksDescripcion li {
   background: #edeef0;
   border: 1px solid #aeadb3;
+  display: inline-block;
   font-size: 13px;
   list-style: none;
   margin-bottom: 5px;
+  margin-right: 3px;
   width: 100px;
 }
 body .productoPag .productoFoto .contenedorProductoFoto .descripcion .linksDescripcion li:hover {
@@ -3576,6 +3578,7 @@ table tfoot .cart_total_voucher .price-discount {
   display: block;
   font-size: 15px;
   font-style: italic;
+  font-weight: 600;
   margin-bottom: 7px;
   position: relative;
   text-decoration: none;
@@ -3607,7 +3610,7 @@ table tfoot .cart_total_voucher .price-discount {
   width: 100%;
 }
 .menuManias > ul > li > ul li ul li a {
-  color: #aeadb3;
+  color: #5b5b5f;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   margin: 0 !important;
