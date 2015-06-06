@@ -5986,16 +5986,19 @@ td .sale-box {
   padding: 10px !important;
 }
 .fancybox-wrap .fancybox-skin .fancybox-outer .fancybox-inner p {
-  border-bottom: 1px solid #5b5b5f;
-  border-top: 1px solid #5b5b5f;
-  display: inline-block;
   font-family: 'oswaldregular';
   font-size: 20px;
   font-weight: 100;
   vertical-align: middle;
   width: 90%;
 }
-.fancybox-wrap .fancybox-skin .fancybox-outer .fancybox-inner p:before {
+.fancybox-wrap .fancybox-skin .fancybox-outer .fancybox-inner .fancybox-error {
+  border-bottom: 1px solid #5b5b5f;
+  border-top: 1px solid #5b5b5f;
+  display: inline-block;
+  padding: 15px 10px;
+}
+.fancybox-wrap .fancybox-skin .fancybox-outer .fancybox-inner .fancybox-error:before {
   color: #cacaca;
   content: '\e699';
   display: inline-block;
@@ -6005,9 +6008,6 @@ td .sale-box {
   height: 40px;
   vertical-align: middle;
   width: 55px;
-}
-.fancybox-wrap .fancybox-skin .fancybox-outer .fancybox-inner .fancybox-error {
-  padding: 15px 10px;
 }
 hr {
   display: none;
