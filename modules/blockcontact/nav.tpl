@@ -29,7 +29,7 @@
 			<a href="{$link->getPageLink('contact', true)|escape:'html':'UTF-8'}" title="{l s='Contact Us' mod='blockcontact'}">{l s='Contact us' mod='blockcontact'}</a>
 		</div> -->
 		<div class="candadito">
-			<img src="http://www.asistecar.cl/public_img/secure.gif" alt="" class="imgCandadito">
+			<img src="https://www.asistecar.cl/public_img/secure.gif" alt="" class="imgCandadito">
 			<p class="textCandadito">Compra segura</p>
 		</div>
 		{if $telnumber}

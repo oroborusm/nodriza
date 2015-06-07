@@ -6195,7 +6195,7 @@ hr {
 }
 .order_carrier_content .delivery_options_address .delivery_options .delivery_option {
   display: inline-block;
-  margin: 2px auto;
+  margin-bottom: 15px;
   vertical-align: top;
   width: 70%;
 }
@@ -6597,6 +6597,13 @@ hr {
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   transition: 0.5s;
+}
+.volverBusqueda a {
+  color: #434142;
+  display: block;
+  font-family: 'oswaldregular';
+  font-weight: 100;
+  margin-bottom: 15px;
 }
 @-moz-keyframes anim-open {
   0% {
