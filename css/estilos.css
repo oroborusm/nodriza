@@ -1199,7 +1199,6 @@ body .box .rodeaAddress form .activaEmpresa {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 22px;
   padding: 0 10px;
   text-align: left;
 }
@@ -1378,7 +1377,6 @@ body .box .rodeaAddress form .esRegion .selector span {
   display: none;
 }
 body .box .rodeaAddress form .esRutEmpresa {
-  display: none;
   margin: 0;
 }
 body .box .rodeaAddress form .infoAdicional {
@@ -3554,8 +3552,8 @@ table tfoot .cart_total_voucher .price-discount {
   min-height: 260px;
   left: 0;
   opacity: 1 !important;
-  -ms-filter: none;
-  filter: none;
+  -ms-filter: none !important;
+  filter: none !important;
   padding: 20px 15% 10px 6%;
   position: absolute;
   text-align: left;
@@ -6384,9 +6382,6 @@ hr {
 }
 .cuadroComentario .submit button:hover span {
   color: #fff;
-}
-.alto {
-  height: 80px !important;
 }
 .formDirecciones h1 {
   margin-top: 0;
