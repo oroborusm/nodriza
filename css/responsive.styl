@@ -47,6 +47,8 @@
 					width 100%
 				.footerSocial
 					.contFooterSocial
+						img
+							width 250px !important
 						.mediosPago
 							img
 								width 250px
@@ -231,16 +233,34 @@
 		margin 0
 		width 100%
 	.añadeCarrituHome
-		height 35px
+		height 40px
 		opacity 1
-		width 35px
+		width 40px
 		a
+			display block
+			height 40px
+			width 40px
 			span
 				&:before
 					font-size 16px
-					height 35px
-					line-height 35px
-					width 35px
+					height 40px
+					line-height 40px
+					width 40px
+	.carrito 
+		.carritoHover
+			.carritoDeCompra
+				.cart_block
+					.block_content
+						.cart_block_list
+							.products
+								.first_item
+								.item
+								.last_item 
+									.remove_link
+										a
+											text-decoration none
+											&:after
+												font-size 20px
 	.contenedorPartners
 		width 100%
 	.contenedorProductoFoto
@@ -254,17 +274,18 @@
 			.contenedorPopular
 				.right-block
 					.wishlist
-						height 35px
+						height 40px
 						opacity 1
-						width 35px
+						width 40px
 						a
-							height 35px
-							width 35px
+							display block
+							height 40px
+							width 40px
 							&:before
 								font-size 16px
-								line-height 35px
-								height 35px
-								width 35px
+								line-height 40px
+								height 40px
+								width 40px
 	.menuManias
 		.menuTop
 			//background-color #434142
@@ -436,6 +457,11 @@
 				.creaCuenta
 					height 280px
 					width 60%
+		.direcciones
+			.agregarNueva
+				width 100%
+			.recomendacion
+				font-size 14px
 		.formCarrito
 			.listaCompra
 				li

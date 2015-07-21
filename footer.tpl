@@ -34,7 +34,7 @@
 					{if isset($HOOK_HOME) && $HOOK_HOME|trim}
 					<!-- hook_home arriba en los comentarios quedo el contenido que va aca por default-->
 
-						<div class="contenedorPartners">
+						<div class="contenedorPartners cd-main-content">
 
 							  <!-- SilverTrack requires only this part -->
 								<div class="owl-carousel">

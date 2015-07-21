@@ -52,6 +52,9 @@
     position: relative;
     width: 100%;
   }
+  body footer .row .footerSocial .contFooterSocial img {
+    width: 250px !important;
+  }
   body footer .row .footerSocial .contFooterSocial .mediosPago img {
     width: 250px;
   }
@@ -258,17 +261,32 @@
     width: 100%;
   }
   .añadeCarrituHome {
-    height: 35px;
+    height: 40px;
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    width: 35px;
+    width: 40px;
+  }
+  .añadeCarrituHome a {
+    display: block;
+    height: 40px;
+    width: 40px;
   }
   .añadeCarrituHome a span:before {
     font-size: 16px;
-    height: 35px;
-    line-height: 35px;
-    width: 35px;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+  }
+  .carrito .carritoHover .carritoDeCompra .cart_block .block_content .cart_block_list .products .first_item .remove_link a,
+  .carrito .carritoHover .carritoDeCompra .cart_block .block_content .cart_block_list .products .item .remove_link a,
+  .carrito .carritoHover .carritoDeCompra .cart_block .block_content .cart_block_list .products .last_item .remove_link a {
+    text-decoration: none;
+  }
+  .carrito .carritoHover .carritoDeCompra .cart_block .block_content .cart_block_list .products .first_item .remove_link a:after,
+  .carrito .carritoHover .carritoDeCompra .cart_block .block_content .cart_block_list .products .item .remove_link a:after,
+  .carrito .carritoHover .carritoDeCompra .cart_block .block_content .cart_block_list .products .last_item .remove_link a:after {
+    font-size: 20px;
   }
   .contenedorPartners {
     width: 100%;
@@ -283,21 +301,22 @@
     width: 23.5%;
   }
   .listaProducto .listaProductoLi .contenedorPopular .right-block .wishlist {
-    height: 35px;
+    height: 40px;
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    width: 35px;
+    width: 40px;
   }
   .listaProducto .listaProductoLi .contenedorPopular .right-block .wishlist a {
-    height: 35px;
-    width: 35px;
+    display: block;
+    height: 40px;
+    width: 40px;
   }
   .listaProducto .listaProductoLi .contenedorPopular .right-block .wishlist a:before {
     font-size: 16px;
-    line-height: 35px;
-    height: 35px;
-    width: 35px;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
   }
   .menuManias .menuTop {
     border: 0;
@@ -469,6 +488,12 @@
   body .autenticacion .contenedorLogin .creaCuenta {
     height: 280px;
     width: 60%;
+  }
+  body .direcciones .agregarNueva {
+    width: 100%;
+  }
+  body .direcciones .recomendacion {
+    font-size: 14px;
   }
   body .formCarrito .listaCompra li a,
   body .formCarrito .listaCompra li span {
