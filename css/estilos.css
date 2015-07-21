@@ -4771,6 +4771,9 @@ table tfoot .cart_total_voucher .price-discount {
   border: 1px solid #5b5b5f;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: none;
   font-size: 12px;
   left: 50%;
@@ -4778,7 +4781,6 @@ table tfoot .cart_total_voucher .price-discount {
   padding: 5px;
   position: fixed;
   text-align: right;
-  top: 75px !important;
   width: 220px;
   z-index: 100001;
 }
