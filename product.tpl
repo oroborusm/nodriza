@@ -59,47 +59,87 @@
 		<!-- left infos-->
 		<div class="contenedorProductoFoto">
 			<!-- product img-->
-			<div id="image-block" class="imagenGrande">
-				<!-- {if $product->new}
-					<span class="new-box">
-						<span class="new-label">{l s='New'}</span>
-					</span>
-				{/if} -->
-				{if $product->on_sale}
-					<span class="sale-box">
-						<p class="sale-label"><span>{l s='Sale!'}</span></p>
-					</span>
-				{elseif $product->specificPrice && $product->specificPrice.reduction && $productPriceWithoutReduction > $productPrice}
-					<span class="discount">{l s='Reduced price!'}</span>
-				{/if}
-				{if $have_image}
-					<span id="view_full_size" class="contenedorImagen">
-						{if $jqZoomEnabled && $have_image && !$content_only}
-							<a class="jqzoom" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" rel="gal1" href="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'thickbox_default')|escape:'html':'UTF-8'}" itemprop="url">
-								<img itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"/>
-							</a>
-						{else}
-							<img id="bigpic" itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"/>
-							{if !$content_only}
-								<!-- <span  class="quick-view">{l s='View larger'}</span> -->
-								<a class="quick-view" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" rel="gal1" href="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'thickbox_default')|escape:'html':'UTF-8'}" itemprop="url">
-									<span>{l s='View larger'}</span>
+			<div class="contenedorImagenes">
+				
+				<div id="image-block" class="imagenGrande">
+					<!-- {if $product->new}
+						<span class="new-box">
+							<span class="new-label">{l s='New'}</span>
+						</span>
+					{/if} -->
+					{if $product->on_sale}
+						<span class="sale-box">
+							<p class="sale-label"><span>{l s='Sale!'}</span></p>
+						</span>
+					{elseif $product->specificPrice && $product->specificPrice.reduction && $productPriceWithoutReduction > $productPrice}
+						<span class="discount">{l s='Reduced price!'}</span>
+					{/if}
+					{if $have_image}
+						<span id="view_full_size" class="contenedorImagen">
+							{if $jqZoomEnabled && $have_image && !$content_only}
+								<a class="jqzoom" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" rel="gal1" href="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'thickbox_default')|escape:'html':'UTF-8'}" itemprop="url">
+									<img itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"/>
 								</a>
+							{else}
+								<img id="bigpic" itemprop="image" src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')|escape:'html':'UTF-8'}" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" alt="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}"/>
+								{if !$content_only}
+									<!-- <span  class="quick-view">{l s='View larger'}</span> -->
+									<a class="quick-view" title="{if !empty($cover.legend)}{$cover.legend|escape:'html':'UTF-8'}{else}{$product->name|escape:'html':'UTF-8'}{/if}" rel="gal1" href="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'thickbox_default')|escape:'html':'UTF-8'}" itemprop="url">
+										<span>{l s='View larger'}</span>
+									</a>
+								{/if}
 							{/if}
-						{/if}
-					</span>
-				{else}
-					<span id="view_full_size">
-						<img itemprop="image" src="{$img_prod_dir}{$lang_iso}-default-large_default.jpg" id="bigpic" alt="" title="{$product->name|escape:'html':'UTF-8'}" width="{$largeSize.width}" height="{$largeSize.height}"/>
-						{if !$content_only}
-							<span class="span_link">
-								{l s='View larger'}
+						</span>
+					{else}
+						<span id="view_full_size">
+							<img itemprop="image" src="{$img_prod_dir}{$lang_iso}-default-large_default.jpg" id="bigpic" alt="" title="{$product->name|escape:'html':'UTF-8'}" width="{$largeSize.width}" height="{$largeSize.height}"/>
+							{if !$content_only}
+								<span class="span_link">
+									{l s='View larger'}
+								</span>
+							{/if}
+						</span>
+					{/if}
+				</div> <!-- end image-block -->
+				{if isset($images) && count($images) > 0}
+					<!-- thumbnails -->
+					<div id="views_block" class="muestraChica">
+						{if isset($images) && count($images) > 2}
+							<span class="view_scroll_spacer">
+								<a id="view_scroll_left" class="" title="{l s='Other views'}" href="javascript:{ldelim}{rdelim}">
+									{l s='Previous'}
+								</a>
 							</span>
 						{/if}
-					</span>
+						<div id="thumbs_list" class="rodeaMuestraChica">
+							<ul id="thumbs_list_frame">
+							{if isset($images)}
+								{foreach from=$images item=image name=thumbnails}
+									{assign var=imageIds value="`$product->id`-`$image.id_image`"}
+									{if !empty($image.legend)}
+										{assign var=imageTitle value=$image.legend|escape:'html':'UTF-8'}
+									{else}
+										{assign var=imageTitle value=$product->name|escape:'html':'UTF-8'}
+									{/if}
+									<li id="thumbnail_{$image.id_image}"{if $smarty.foreach.thumbnails.last} class="last"{/if}>
+										<a{if $jqZoomEnabled && $have_image && !$content_only} href="javascript:void(0);" rel="{literal}{{/literal}gallery: 'gal1', smallimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'large_default')|escape:'html':'UTF-8'}',largeimage: '{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}'{literal}}{/literal}"{else} href="{$link->getImageLink($product->link_rewrite, $imageIds, 'thickbox_default')|escape:'html':'UTF-8'}"	data-fancybox-group="other-views" class="fancybox{if $image.id_image == $cover.id_image} shown{/if}"{/if} title="{$imageTitle}">
+											<img class="img-responsive" id="thumb_{$image.id_image}" src="{$link->getImageLink($product->link_rewrite, $imageIds, 'cart_default')|escape:'html':'UTF-8'}" alt="{$imageTitle}" title="{$imageTitle}" height="{$cartSize.height}" width="{$cartSize.width}" itemprop="image" />
+										</a>
+									</li>
+								{/foreach}
+							{/if}
+							</ul>
+						</div> <!-- end thumbs_list -->
+						{if isset($images) && count($images) > 2}
+							<a id="view_scroll_right" title="{l s='Other views'}" href="javascript:{ldelim}{rdelim}">
+								{l s='Next'}
+							</a>
+						{/if}
+					</div> <!-- end views-block -->
+					<!-- end thumbnails -->
 				{/if}
-			</div> <!-- end image-block -->
-
+			</div>
+			
 
 
 			<div class="descripcion">
@@ -252,7 +292,19 @@
 							<input type="hidden" name="id_product_attribute" id="idCombination" value="" />
 						</p>
 						<div class="box-info-product">
-							<div class="content_prices">
+
+							<div class="box-cart-bottom">
+								<div{if (!$allow_oosp && $product->quantity <= 0) || !$product->available_for_order || (isset($restricted_country_mode) && $restricted_country_mode) || $PS_CATALOG_MODE} class="unvisible"{/if}>
+									<p id="add_to_cart" class="agregaCarrito">
+										<button type="submit" name="Submit" class="exclusive">
+											<span>{if $content_only && (isset($product->customization_required) && $product->customization_required)}{l s='Customize'}{else}{l s='Add to cart'}{/if}</span>
+										</button>
+									</p>
+								</div>
+								{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}<strong></strong>
+							</div> <!-- end box-cart-bottom -->
+
+														<div class="content_prices">
 								{if $product->show_price && !isset($restricted_country_mode) && !$PS_CATALOG_MODE}
 									<!-- prices -->
 									<div class="price">
@@ -312,103 +364,94 @@
 									{/if}
 								{/if} {*close if for show price*}
 								{hook h="displayProductPriceBlock" product=$product type="weight"}
-								<div class="clear"></div>
-							</div> <!-- end content_prices -->
-							<div class="cantidad">
-								<!-- quantity wanted -->
-
-								{if !$PS_CATALOG_MODE}
-								<p id="quantity_wanted_p" class="contieneCantidad"{if (!$allow_oosp && $product->quantity <= 0) || !$product->available_for_order || $PS_CATALOG_MODE} style="display: none;"{/if}>
-									<!-- <label>{l s='Quantity'}</label> -->
-
-									<input type="text" name="qty" id="quantity_wanted" class="text" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" />
-
-										<!-- <div class="updown"> -->
-											<a href="#" data-field-qty="qty" class="product_quantity_up">
-												<span><i class="icon-plus"></i></span>
-											</a>
-
-											<a href="#" data-field-qty="qty" class="product_quantity_down">
-												<span><i class="icon-minus"></i></span>
-											</a>
-
-										<!-- </div> -->
-
-									<!-- <span class="clearfix"></span> -->
-								</p>
-								{/if}
 
 
+								<div class="cantidad">
+									<!-- quantity wanted -->
 
+									{if !$PS_CATALOG_MODE}
+									<p id="quantity_wanted_p" class="contieneCantidad"{if (!$allow_oosp && $product->quantity <= 0) || !$product->available_for_order || $PS_CATALOG_MODE} style="display: none;"{/if}>
+										<!-- <label>{l s='Quantity'}</label> -->
 
+										<input type="text" name="qty" id="quantity_wanted" class="text" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" />
 
+											<!-- <div class="updown"> -->
+												<a href="#" data-field-qty="qty" class="product_quantity_up">
+													<span><i class="icon-plus"></i></span>
+												</a>
 
+												<a href="#" data-field-qty="qty" class="product_quantity_down">
+													<span><i class="icon-minus"></i></span>
+												</a>
 
-								<!-- minimal quantity wanted -->
-								<p id="minimal_quantity_wanted_p"{if $product->minimal_quantity <= 1 || !$product->available_for_order || $PS_CATALOG_MODE} style="display: none;"{/if}>
-									{l s='This product is not sold individually. You must select at least'} <b id="minimal_quantity_label">{$product->minimal_quantity}</b> {l s='quantity for this product.'}
-								</p>
-								<!-- {if isset($groups)} -->
-									<!-- attributes -->
-									<!-- <div id="attributes">
-										<div class="clearfix"></div>
-										{foreach from=$groups key=id_attribute_group item=group}
-											{if $group.attributes|@count}
-												<fieldset class="attribute_fieldset">
-													<label class="attribute_label" {if $group.group_type != 'color' && $group.group_type != 'radio'}for="group_{$id_attribute_group|intval}"{/if}>{$group.name|escape:'html':'UTF-8'}&nbsp;</label>
-													{assign var="groupName" value="group_$id_attribute_group"}
-													<div class="attribute_list">
-														{if ($group.group_type == 'select')}
-															<select name="{$groupName}" id="group_{$id_attribute_group|intval}" class="form-control attribute_select no-print">
-																{foreach from=$group.attributes key=id_attribute item=group_attribute}
-																	<option value="{$id_attribute|intval}"{if (isset($smarty.get.$groupName) && $smarty.get.$groupName|intval == $id_attribute) || $group.default == $id_attribute} selected="selected"{/if} title="{$group_attribute|escape:'html':'UTF-8'}">{$group_attribute|escape:'html':'UTF-8'}</option>
-																{/foreach}
-															</select>
-														{elseif ($group.group_type == 'color')}
-															<ul id="color_to_pick_list" class="clearfix">
-																{assign var="default_colorpicker" value=""}
-																{foreach from=$group.attributes key=id_attribute item=group_attribute}
-																	{assign var='img_color_exists' value=file_exists($col_img_dir|cat:$id_attribute|cat:'.jpg')}
-																	<li{if $group.default == $id_attribute} class="selected"{/if}>
-																		<a href="{$link->getProductLink($product)|escape:'html':'UTF-8'}" id="color_{$id_attribute|intval}" name="{$colors.$id_attribute.name|escape:'html':'UTF-8'}" class="color_pick{if ($group.default == $id_attribute)} selected{/if}"{if !$img_color_exists && isset($colors.$id_attribute.value) && $colors.$id_attribute.value} style="background:{$colors.$id_attribute.value|escape:'html':'UTF-8'};"{/if} title="{$colors.$id_attribute.name|escape:'html':'UTF-8'}">
-																			{if $img_color_exists}
-																				<img src="{$img_col_dir}{$id_attribute|intval}.jpg" alt="{$colors.$id_attribute.name|escape:'html':'UTF-8'}" title="{$colors.$id_attribute.name|escape:'html':'UTF-8'}" width="20" height="20" />
-																			{/if}
-																		</a>
-																	</li>
-																	{if ($group.default == $id_attribute)}
-																		{$default_colorpicker = $id_attribute}
-																	{/if}
-																{/foreach}
-															</ul>
-															<input type="hidden" class="color_pick_hidden" name="{$groupName|escape:'html':'UTF-8'}" value="{$default_colorpicker|intval}" />
-														{elseif ($group.group_type == 'radio')}
-															<ul>
-																{foreach from=$group.attributes key=id_attribute item=group_attribute}
-																	<li>
-																		<input type="radio" class="attribute_radio" name="{$groupName|escape:'html':'UTF-8'}" value="{$id_attribute}" {if ($group.default == $id_attribute)} checked="checked"{/if} />
-																		<span>{$group_attribute|escape:'html':'UTF-8'}</span>
-																	</li>
-																{/foreach}
-															</ul>
-														{/if} --
-													</div> <!-- end attribute_list -->
-												<!-- </fieldset>
-											{/if}
-										{/foreach}
-									</div> <!-- end attributes -->
-								<!-- {/if} -->
-							</div> <!--end product_attributes -->
-							<div class="box-cart-bottom">
-								<div{if (!$allow_oosp && $product->quantity <= 0) || !$product->available_for_order || (isset($restricted_country_mode) && $restricted_country_mode) || $PS_CATALOG_MODE} class="unvisible"{/if}>
-									<p id="add_to_cart" class="agregaCarrito">
-										<button type="submit" name="Submit" class="exclusive">
-											<span>{if $content_only && (isset($product->customization_required) && $product->customization_required)}{l s='Customize'}{else}{l s='Add to cart'}{/if}</span>
-										</button>
+											<!-- </div> -->
+
+										<!-- <span class="clearfix"></span> -->
 									</p>
-								</div>
-								{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}<strong></strong>
-							</div> <!-- end box-cart-bottom -->
+									{/if}
+
+
+
+
+
+
+
+									<!-- minimal quantity wanted -->
+									<p id="minimal_quantity_wanted_p"{if $product->minimal_quantity <= 1 || !$product->available_for_order || $PS_CATALOG_MODE} style="display: none;"{/if}>
+										{l s='This product is not sold individually. You must select at least'} <b id="minimal_quantity_label">{$product->minimal_quantity}</b> {l s='quantity for this product.'}
+									</p>
+									<!-- {if isset($groups)} -->
+										<!-- attributes -->
+										<!-- <div id="attributes">
+											<div class="clearfix"></div>
+											{foreach from=$groups key=id_attribute_group item=group}
+												{if $group.attributes|@count}
+													<fieldset class="attribute_fieldset">
+														<label class="attribute_label" {if $group.group_type != 'color' && $group.group_type != 'radio'}for="group_{$id_attribute_group|intval}"{/if}>{$group.name|escape:'html':'UTF-8'}&nbsp;</label>
+														{assign var="groupName" value="group_$id_attribute_group"}
+														<div class="attribute_list">
+															{if ($group.group_type == 'select')}
+																<select name="{$groupName}" id="group_{$id_attribute_group|intval}" class="form-control attribute_select no-print">
+																	{foreach from=$group.attributes key=id_attribute item=group_attribute}
+																		<option value="{$id_attribute|intval}"{if (isset($smarty.get.$groupName) && $smarty.get.$groupName|intval == $id_attribute) || $group.default == $id_attribute} selected="selected"{/if} title="{$group_attribute|escape:'html':'UTF-8'}">{$group_attribute|escape:'html':'UTF-8'}</option>
+																	{/foreach}
+																</select>
+															{elseif ($group.group_type == 'color')}
+																<ul id="color_to_pick_list" class="clearfix">
+																	{assign var="default_colorpicker" value=""}
+																	{foreach from=$group.attributes key=id_attribute item=group_attribute}
+																		{assign var='img_color_exists' value=file_exists($col_img_dir|cat:$id_attribute|cat:'.jpg')}
+																		<li{if $group.default == $id_attribute} class="selected"{/if}>
+																			<a href="{$link->getProductLink($product)|escape:'html':'UTF-8'}" id="color_{$id_attribute|intval}" name="{$colors.$id_attribute.name|escape:'html':'UTF-8'}" class="color_pick{if ($group.default == $id_attribute)} selected{/if}"{if !$img_color_exists && isset($colors.$id_attribute.value) && $colors.$id_attribute.value} style="background:{$colors.$id_attribute.value|escape:'html':'UTF-8'};"{/if} title="{$colors.$id_attribute.name|escape:'html':'UTF-8'}">
+																				{if $img_color_exists}
+																					<img src="{$img_col_dir}{$id_attribute|intval}.jpg" alt="{$colors.$id_attribute.name|escape:'html':'UTF-8'}" title="{$colors.$id_attribute.name|escape:'html':'UTF-8'}" width="20" height="20" />
+																				{/if}
+																			</a>
+																		</li>
+																		{if ($group.default == $id_attribute)}
+																			{$default_colorpicker = $id_attribute}
+																		{/if}
+																	{/foreach}
+																</ul>
+																<input type="hidden" class="color_pick_hidden" name="{$groupName|escape:'html':'UTF-8'}" value="{$default_colorpicker|intval}" />
+															{elseif ($group.group_type == 'radio')}
+																<ul>
+																	{foreach from=$group.attributes key=id_attribute item=group_attribute}
+																		<li>
+																			<input type="radio" class="attribute_radio" name="{$groupName|escape:'html':'UTF-8'}" value="{$id_attribute}" {if ($group.default == $id_attribute)} checked="checked"{/if} />
+																			<span>{$group_attribute|escape:'html':'UTF-8'}</span>
+																		</li>
+																	{/foreach}
+																</ul>
+															{/if} --
+														</div> <!-- end attribute_list -->
+													<!-- </fieldset>
+												{/if}
+											{/foreach}
+										</div> <!-- end attributes -->
+									<!-- {/if} -->
+								</div> <!--end product_attributes -->
+							</div> <!-- end content_prices -->
 						</div> <!-- end box-info-product -->
 					</form>
 					{/if}
@@ -423,8 +466,8 @@
 
 
 
-			{if isset($images) && count($images) > 0}
-				<!-- thumbnails -->
+			<!-- {if isset($images) && count($images) > 0}
+				thumbnails
 				<div id="views_block" class="muestraChica">
 					{if isset($images) && count($images) > 2}
 						<span class="view_scroll_spacer">
@@ -451,15 +494,15 @@
 							{/foreach}
 						{/if}
 						</ul>
-					</div> <!-- end thumbs_list -->
+					</div> end thumbs_list
 					{if isset($images) && count($images) > 2}
 						<a id="view_scroll_right" title="{l s='Other views'}" href="javascript:{ldelim}{rdelim}">
 							{l s='Next'}
 						</a>
 					{/if}
-				</div> <!-- end views-block -->
-				<!-- end thumbnails -->
-			{/if}
+				</div> end views-block
+				end thumbnails
+			{/if} -->
 			<!-- {if isset($images) && count($images) > 1}
 				<p class="resetimg clear no-print">
 					<span id="wrapResetImages" style="display: none;">

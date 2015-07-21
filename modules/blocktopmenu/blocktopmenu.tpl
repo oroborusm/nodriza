@@ -1,37 +1,47 @@
 <!-- manias -->
 {if $MENU != ''}
 	<!-- Menu -->
-	<div id="block_top_menu" class="menuManias">
-		<!-- <div class="cat-title">{l s="Categories" mod="blocktopmenu"}</div> -->
-		<ul class="sf-menu menuTop">
+	
+	<nav class="menuManias" id="cd-lateral-nav">
+		<ul class="cd-navigation menuTop">
 			{$MENU}
 		</ul>
-	</div>
+	</nav>
 	<!--/ Menu -->
 {/if}
 
 <script>
-	$('.menuTop > li').addClass('listaMenuTop');
-	//$('.sfHoverForce').addClass('listaMenuTop');
-	//$('.menuTop li ul li').removeClass('listaMenuTop');
-	$('.menuTop > li > a').addClass('testeo');
-	//$('.menuTop li ul li a').removeClass('testeo');
-	$('.testeo').append('<div class="hexagono"><div class="hexagonoDos"><div class="icono"></div></div></div>');
+	$('.menuTop > li:has(> ul)').addClass('item-has-children')
+
+	$('.item-has-children > ul').addClass('sub-menu')
+	$('.item-has-children > ul').addClass('sub-menuDesktop')
 
 	$('#subcategories').addClass('subcategories')
-	
-	//$('.submenu-container li').wrap('<div class="contManias"></div>');
-	//$('.submenu-container li ul li').unwrap('<div class="contManias"></div>');
 
+	//$('#menuTopCierra').on('click', function(){
+	//	$('.menuTop').toggleClass('visible')
+	//	$('.cierraMenu').toggleClass('cruz')
+	//	$('.cierraMenu').toggleClass('lineas')
+	//});
+	if($(window).width() < 800){
+
+		$('.sub-menuDesktop > li:has(> ul)').addClass('item-has-children')
+		$('.sub-menuDesktop > li > ul').addClass('sub-menu')
+	}
+		
 	$(".icono").each(function(i){
 		i++;
 		$(this).addClass("ico"+i);
 	});	
 
-	$(".listaMenuTop").each(function(i){
+	$(".menuTop > li").each(function(i){
 		i++;
 		$(this).addClass("maniaBackground"+i);
 	});	
 	$('.submenu-container > li').removeClass("listaMenuTop");
 
+
+	if($(window).width() > 800){
+		$('.menuTop > li:has(> ul)').addClass('hoverMenu')
+	}
 </script>
