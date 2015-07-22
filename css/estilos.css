@@ -5754,6 +5754,10 @@ td .sale-box {
 .tabsInfo .tabs .navTabs ul .tab-current a h3 {
   padding: 5px 10px 0 10px;
 }
+.tabsInfoCms .tabs .content-wrap table,
+.tabsInfo .tabs .content-wrap table {
+  width: 100% !important;
+}
 .tabsInfoCms .tabs .content-wrap section,
 .tabsInfo .tabs .content-wrap section,
 .tabsInfoCms .tabs .content-wrap .seccionTab,

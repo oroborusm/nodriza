@@ -379,6 +379,9 @@
   .tabsInfo .tabs .navTabs ul .tab-current a h3 {
     font-size: 20px;
   }
+  .tabsInfo .tabs .content-wrap table {
+    width: 100% !important;
+  }
   .tabsInfo .tabs .content-wrap .content-current {
     margin: 0;
     border-left: 0;
@@ -478,6 +481,9 @@
   .navegador .checkout span,
   .navegador .volverCompra span {
     font-size: 14px;
+  }
+  #sslsSiteSeal .sslslock img {
+    width: 26px !important;
   }
 }
 @media screen and (max-width: 460px) {
