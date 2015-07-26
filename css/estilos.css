@@ -1228,7 +1228,7 @@ body .contCarrusel .contCarruselInt .comentariosHome .contcomment ul li .contCom
 body .contCarrusel .contCarruselInt .comentariosHome .contcomment ul li .contComentariosHome {
   float: left;
   margin-left: 18px;
-  max-width: 55%;
+  max-width: 65%;
 }
 body .contCarrusel .contCarruselInt .comentariosHome .contcomment ul li .contComentariosHome a {
   color: #434142;
@@ -1247,8 +1247,10 @@ body .contCarrusel .contCarruselInt .comentariosHome .contcomment ul li .contCom
   margin: 0;
 }
 body .contCarrusel .contCarruselInt .comentariosHome .contcomment ul li .contComentariosHome span p {
-  font-size: 10px;
+  font-family: 'oswaldregular';
+  font-size: 13px;
   font-weight: 100;
+  margin: 5px 0;
   text-align: left;
 }
 body .direcciones {
@@ -4171,9 +4173,10 @@ table tfoot .cart_total_voucher .price-discount {
   width: 45px;
 }
 .añadeCarrituHome a {
+  display: block;
   text-decoration: none;
 }
-.añadeCarrituHome a span:before {
+.añadeCarrituHome span:before {
   color: #fff;
   content: '\e636';
   display: block;
@@ -4264,7 +4267,7 @@ table tfoot .cart_total_voucher .price-discount {
   font-family: 'oswaldregular';
   font-size: 13px;
   line-height: 20px;
-  margin: 15px auto;
+  margin: 35px auto 15px;
   position: relative;
 }
 .breadcrumb a {
@@ -4571,7 +4574,7 @@ table tfoot .cart_total_voucher .price-discount {
 }
 .contenedorFormNuevoComentario .footerFormComentarios .botonesAgregaComentario {
   text-align: right;
-  width: 98%;
+  width: 100% !important;
 }
 .contenedorFormNuevoComentario .footerFormComentarios .botonesAgregaComentario button {
   background: #ff4c00;

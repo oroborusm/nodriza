@@ -256,7 +256,6 @@ Main components
   position: relative;
   /* background-color: #f5f4e9; */
   z-index: 2;
-  padding-top: 20px;
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden;
