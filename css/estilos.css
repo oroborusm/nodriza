@@ -5335,7 +5335,7 @@ table tfoot .cart_total_voucher .price-discount {
 td .sale-box {
   display: none;
 }
-.accedeCuenta {
+.accedeCuentaChica {
   background: #fff;
   border: 2px solid #ecedef;
   display: none;
@@ -5344,35 +5344,35 @@ td .sale-box {
   position: relative;
   z-index: 1;
 }
-.accedeCuenta form {
+.accedeCuentaChica form {
   width: 100%;
 }
-.accedeCuenta form .form_content .form-group {
+.accedeCuentaChica form .form_content .form-group {
   padding: 5px 0;
 }
-.accedeCuenta form .form_content .form-group label {
+.accedeCuentaChica form .form_content .form-group label {
   display: block;
   font-size: 13px;
   text-align: left;
   width: 100%;
 }
-.accedeCuenta form .form_content .form-group input {
+.accedeCuentaChica form .form_content .form-group input {
   -webkit-border-radius: 2px;
   border-radius: 2px;
   display: block;
   font-size: 15px;
   width: 100%;
 }
-.accedeCuenta form .form_content .form-group input:focus {
+.accedeCuentaChica form .form_content .form-group input:focus {
   background: #f0f8ff;
 }
-.accedeCuenta form .form_content .emailLogin {
+.accedeCuentaChica form .form_content .emailLogin {
   font-family: 'oswaldregular';
 }
-.accedeCuenta form .form_content .passwordLogin {
+.accedeCuentaChica form .form_content .passwordLogin {
   font-family: 'oswaldregular';
 }
-.accedeCuenta form .form_content .linkCreaCuenta {
+.accedeCuentaChica form .form_content .linkCreaCuenta {
   background: #ff4c00;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -5384,26 +5384,26 @@ td .sale-box {
   margin: 0;
   text-decoration: none;
 }
-.accedeCuenta form .form_content .linkCreaCuenta:hover {
+.accedeCuentaChica form .form_content .linkCreaCuenta:hover {
   text-decoration: underline;
 }
-.accedeCuenta form .form_content .lost_password {
+.accedeCuentaChica form .form_content .lost_password {
   font-size: 12px;
   margin: 14px 0 0 0;
 }
-.accedeCuenta form .form_content .lost_password a {
+.accedeCuentaChica form .form_content .lost_password a {
   color: #434142;
   font-weight: 100;
   text-decoration: none;
 }
-.accedeCuenta form .form_content .lost_password a:hover {
+.accedeCuentaChica form .form_content .lost_password a:hover {
   text-decoration: underline;
 }
-.accedeCuenta form .form_content .submit {
+.accedeCuentaChica form .form_content .submit {
   margin: 10px 0 0 0;
   text-align: right;
 }
-.accedeCuenta form .form_content .submit button {
+.accedeCuentaChica form .form_content .submit button {
   background: transparent;
   border: 1px solid #ecedef;
   -webkit-border-radius: 2px;
@@ -5411,16 +5411,16 @@ td .sale-box {
   color: #434142;
   width: 100%;
 }
-.accedeCuenta form .form_content .submit button:hover {
+.accedeCuentaChica form .form_content .submit button:hover {
   background: #f8b302;
   color: #fff;
 }
-.accedeCuenta form .form_content .submit button span {
+.accedeCuentaChica form .form_content .submit button span {
   font-family: 'oswaldregular';
   font-size: 15px;
   line-height: 30px;
 }
-.accedeCuenta form .form_content .submit input {
+.accedeCuentaChica form .form_content .submit input {
   display: block;
   width: 100%;
 }
