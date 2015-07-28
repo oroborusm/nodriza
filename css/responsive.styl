@@ -1,9 +1,20 @@
 @import "nib"
 @import 'nib/gradients'
 
-@media screen and (max-width: 802px)
+@media screen and (min-width:801px)
+	#cd-lateral-nav
+		background-color: #434142;
+		height 30px
+		margin 0 auto
+		overflow visible
+		position relative
+		transform translateX(0)
+		visibility visible
+		width 950px
+
+@media screen and (max-width: 800px)
 	body
-		footer
+		footer 
 			box-sizing border-box
 			padding 20px
 			.finFooter
@@ -508,7 +519,7 @@
 		box-sizing border-box
 		width 100%
 
-@media only screen and (min-width: 802px) 
+@media only screen and (min-width: 800px) 
 	.contenedorMenu
 		background #434142
 		border-bottom 1px solid #999
@@ -549,16 +560,6 @@
 		
 	.cd-main-content
 		z-index 0
-	
-	#cd-lateral-nav
-		background-color: #434142;
-		height 30px
-		margin 0 auto
-		overflow visible
-		position relative
-		transform translateX(0)
-		visibility visible
-		width 950px
 	
 	#cd-top-nav 
 		display block
@@ -607,3 +608,4 @@
 								width 100%
 	.listaDireccion .contenedorListaDireccion
 		width 100%
+		
