@@ -367,13 +367,18 @@ body footer .row .informacionFooter ul {
   padding: 0;
 }
 body footer .row .informacionFooter ul li {
+  color: #434142;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 body footer .row .informacionFooter ul li span {
   color: #434142;
-  display: block;
+  font-weight: 600;
+  display: inline-block;
+}
+body footer .row .informacionFooter ul li span a {
+  color: #434142;
 }
 body header {
   background: #fff;
@@ -1247,7 +1252,7 @@ body .contCarrusel .contCarruselInt .comentariosHome .contcomment ul li .contCom
   margin: 0;
 }
 body .contCarrusel .contCarruselInt .comentariosHome .contcomment ul li .contComentariosHome span p {
-  font-family: 'oswaldregular';
+  font-family: 'oswaldlight';
   font-size: 13px;
   font-weight: 100;
   margin: 5px 0;
@@ -6546,6 +6551,12 @@ hr {
 }
 .hoverMenu:hover .sub-menuDesktop {
   display: block !important;
+}
+.oscuro {
+  color: #434142 !important;
+}
+#oosHook {
+  display: none;
 }
 @-moz-keyframes anim-open {
   0% {
