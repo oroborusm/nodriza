@@ -35,7 +35,7 @@ $(function(){
 	})
 
 	$('.login').on('click', function(){
-		$('.accedeCuenta').toggleClass('activo')
+		$('.accedeCuentaChica').toggleClass('activo')
 		removeClass = false;
 	});
 

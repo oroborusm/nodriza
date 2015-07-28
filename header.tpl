@@ -128,7 +128,7 @@
 								<div class="login">
 									{l s='Login' mod='blockuserinfo'}
 								</div>
-								<div class="accedeCuenta">
+								<div class="accedeCuentaChica">
 									<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="login_form" autocomplete="off">
 										<!-- <h3 class="page-subheading">{l s='Already registered?'}</h3> -->
 										<div class="form_content">
