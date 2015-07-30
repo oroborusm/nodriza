@@ -51,7 +51,7 @@
 			{foreach from=$ordered_adr_fields item=field_name}
 				{if $field_name eq 'company'}
 					<div class="activaEmpresa">
-						<label for="checkbox_id">¿Eres de una empresa?</label>
+						<label for="checkbox_id">¿Eres empresa?</label>
 						<input type="checkbox" id="checkbox_id">
 						<div class="form-group esEmpresa">
 							<label for="company">{l s='Company'}</label>
